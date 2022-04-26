@@ -1,0 +1,82 @@
+# Practica 1
+Analizar y diseñar la solución para el siguiente problema:
+Definición: ¿Que tengo que hacer para ir al cine a ver Dr Strange?
+
+# SOLUCION 1
+1.	salir en camino al cine
+2.	entra al cine
+3.	seleccionar hora de la función de la película dr strange
+4.	dirigirme a la taquilla
+5.	solicitar el mejor asiento de la sala
+6.	comprar el boleto para la película dr strange
+7.	tomar el boleto
+8.	leer en el boleto el numero de sala en el que la peli será proyectada
+9.	dirigirme a la sala
+10.	entra a la sala
+**BUSCAR EL ASIENTO**
+11.	tomar asiento
+**12. ver la peli**
+
+
+# SOLUCION 2
+Punto de origen:
+Destino: cine mas cercano
+Objetivo: ver Dr Strange
+1. Segun tu destino, identifica el cine mas cercano.
+2. Dirigete al cine.
+**PROCESO DE LLEGAR**
+3. Compra un boleto en la caja o **dulceria**.
+4. Dirigete a la sala de cine que indica el boleto.
+5. Toma asiento.
+6. Disfruta la pelicula
+
+
+# SOLUCION 3
+1.	Tener tiempo y dinero para ir al cine
+2.	Investigar si la película está en cartelera
+3.	Revisar si existe algún cine cerca de mi casa
+4.	Buscar fechas y horarios para ir a ver la película
+5.	Comprar un boleto para ver la película **EN INTERNET**
+6.	Llega el día
+7.	Terminar los deberes prepararse para ir al cine
+8.	Salir de casa y buscar un medio de transporte para llegar al cine
+9.	Llegar al cine
+10.	Presentar el boleto en cartelera
+11.	Ingresar **al cine**
+**UBICAR EL ASIENTO DEL BOLETO**
+12.	Sentarse en la butaca
+
+
+# SOLUCION 4
+1- buscar horarios en internet para Dr Strange
+2- proponer horario a amigos
+3- todos están de acuerdo?
+sí, continuar al paso 4
+no, regresar al paso 1
+4- preguntar por preferencia de asientos
+5- reservar boletos en linea
+6- esperar a la fecha
+7- ir al cine
+**PROCESO DE LLEGADA**
+**LLEGAR A LA ENTRADA DE ZONA DE SALAS**
+8- cada visitante muestra su boleto digital
+**UBICAR EL ASIENTO**
+9- entrar y disfrutar la película
+
+
+# SOLUCION 5
+Saber qué día se estrena
+Saber con quién voy a ir
+Elegir el cine
+Elegir un día
+Elegir un horario
+Buscar si hay boletos disponibles para esa función
+Si hay disponibles comprar los boletos en línea
+Si no hay buscar otra función
+Apartar en mi agenda ese día y hora
+Ir al cine en ese día
+Hacer fila para los snacks
+**MOSTRAR SUS BOLETOS**
+Entrar a la sala
+**UBICAR EL LUGAR**
+Disfrutar la película

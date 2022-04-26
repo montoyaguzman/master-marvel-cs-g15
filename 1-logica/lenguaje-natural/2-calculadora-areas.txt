@@ -1,0 +1,66 @@
+# Practica 2
+Definir, analizar y diseñar la solución para el siguiente problema:
+“Quiero una calculadora de áreas y perímetros para figuras”.
+
+# Paso 1 - Definirla (Indagar)
+
+1. ¿Qué figuras quieres calcular?
+Rectangulo, triangulo y cuadrado
+
+2. ¿el cliente/usuario dará medidas?
+SI
+
+3. ¿se puede calcular 3 figuras al mismo tiempo o como funciona el orden del programa?
+El usuario indique la figura y la magnitud que quiere calcular
+
+4. ¿Quieres calcular el area o perímetro de forma independiente o en conjunto?
+Solo una a la vez
+
+5. En la parte de triangulos incluimos todos los tipos de triangulos?
+Solo resolver para triangulos isoceles
+
+6. ¿Las dimensiones en que momento se insertan?
+Despues de decidir la magnitud y figura a calcular
+
+7. ¿Unidad de medida?
+Centimetros
+
+8. ¿Conversión?
+No, solo centimentros de entrada y de salida.
+
+9. ¿La calculadora va a mostrar el procedimiento y formulas?
+No, solo pedir figura, magnitud y dimensiones y devolver el resultado
+
+10. Planeas implementar mas cálculos o figuras a futuro?
+No, pero algun dia podria usar esferas, romboides, cilindros.
+
+11. Se desean acumular o guardar los resultados para consultarlos más tarde
+No, solo mostrar en pantalla
+
+“Quiero una calculadora de áreas y perímetros para figuras”.
+
+# Paso 2 - Escribir la definición
+“Quiero una calculadora de áreas y perímetros para figuras. La calculadora
+solicitara al usuario el nombre de la figura, magnitud a calcular y medidas. 
+Entonces calcula y devolvera un resultado. Una vez terminado un flujo, se puede
+calcular los datos de otra figura si se vuelve a ingresar las entradas.
+NOTA 1: Todo en centimetros.
+NOTA 2: En triangulo solo considerar el isoceles.
+NOTA 3: Considerar que quiza despues haya mas figuras.
+”.
+
+# Paso 3 - Algoritmo en lenguaje natural
+
+1. Diseñar un menú interactivo con cuatro opciones (tentativamente más de cuatro).
+    1. Rectángulo
+    2. Triángulo Isósceles
+    3. Cuadrado
+    4. Salir
+2. Solicitar que magnitud calcular
+    1. Área
+    2. Perímetro
+3. Solicitar las dimensiones en centímetros de acuerdo a la figura
+    1. Para rectángulo: Largo y ancho del rectángulo
+    2. Para triángulo isósceles:  base y  lado (para perímetro), base y altura (para área) 
+    3. Para cuadrado: lado del cuadrado
+4. Presentar la medida solicitada, la figura y su resultado. Además preguntar si desea continuar o salir del programa

@@ -1,0 +1,16 @@
+
+
+**Fases de diseño de análisis de un problema**
+
+* Definición.
+* Análisis (entradas, proceso, salidas).
+* Diseño de un algoritmo.
+* Transformación del algoritmo en código.
+* Ejecución y validación.
+* Pruebas de aceptación.
+
+**Requerimientos funcionales**
+Son aquellos requerimientos que tienen que ver con la solucion del usuario.
+
+**Requerimientos funcionales**
+Son caracteristicas que un sistema necesita para funcionar adecuadamente pero que no aportan valor operativo al usuario.
