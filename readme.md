@@ -20,7 +20,7 @@ Son caracteristicas que un sistema necesita para funcionar adecuadamente pero qu
 
 #### Algoritmo
 
-Un algoritmo es un conjunto de acciones que especifican la secuencia de operaciones realizar, en orden, para resolver un problema. 
+Un algoritmo es un conjunto de acciones que especifican la secuencia de operaciones realizar, en orden, para resolver un problema.
 
 #### Partes de un algoritmo
 
@@ -68,4 +68,10 @@ git pull origin develop
 
 Es un [lenguaje de marcado ligero](https://es.wikipedia.org/wiki/Lenguajes_de_marcas_ligeros "Lenguajes de marcas ligeros") creado por [John Gruber](https://en.wikipedia.org/wiki/John_Gruber "en:John Gruber") y [Aaron Swartz](https://es.wikipedia.org/wiki/Aaron_Swartz "Aaron Swartz") que trata de conseguir la máxima legibilidad y facilidad de publicación tanto en su forma de entrada como de salida, se inspira en convenciones existentes para marcar mensajes de correo electrónico usando texto plano.
 
-[Aprender sobre la sintáxis de markdown](https://markdown.es/sintaxis-markdown/)
+#### **Áreas de estudio**
+
+**Ingenieria de software** => Diagramas UML, Metodologías ágiles, estándares de software.
+
+**Introducción a la lógica de programación** => Lenguaje natural, diagramas de flujo, pseudocodigo, pruebas de escritorio, etc.
+
+**Matemáticas discretas y algebra boleana** => Condiciones
