@@ -63,4 +63,5 @@ NOTA 3: Considerar que quiza despues haya mas figuras.
     1. Para rectángulo: Largo y ancho del rectángulo
     2. Para triángulo isósceles:  base y  lado (para perímetro), base y altura (para área) 
     3. Para cuadrado: lado del cuadrado
-4. Presentar la medida solicitada, la figura y su resultado. Además preguntar si desea continuar o salir del programa
+4. Presentar la medida solicitada, la figura y su resultado. 
+Además preguntar si desea continuar o salir del programa.
