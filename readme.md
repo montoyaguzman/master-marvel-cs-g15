@@ -18,16 +18,23 @@ Son aquellos requerimientos que tienen que ver con la solucion del usuario.
 **Requerimientos no funcionales**
 Son caracteristicas que un sistema necesita para funcionar adecuadamente pero que no aportan valor operativo al usuario.
 
+#### Algoritmo
 
-#### Diseño algoritmos
+Un algoritmo es un conjunto de acciones que especifican la secuencia de operaciones realizar, en orden, para resolver un problema. 
 
-Loading...
+#### Partes de un algoritmo
 
+* Entrada.
+* Proceso.
+* Salida.
 
+#### Representaciones de un algoritmo
 
-
-
-
+* Lenguaje natural.
+* Diagrama de flujo.
+* Pseudocódigo.
+* Código.
+* Pruebas de escritorio.
 
 ### Información adicional
 
@@ -56,7 +63,6 @@ git push origin main
 git pull origin develop
 
 ```
-
 
 #### **Markdown**
 
