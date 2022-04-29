@@ -32,13 +32,16 @@ console.log('matrizB => ', matrizB);
 // console.log(matrizB[1][1]);
 // console.log(matriz[0][3]); // undefined
 
-for (var fila = 0; fila < 3; fila++) {
-    for (var columna = 0; columna < 3; columna++) {
+for (var fila = 0; fila < matrizResultado.length; fila++) {
+    for (var columna = 0; columna < matrizResultado.length; columna++) {
+        debugger
+        // console.log(fila)
+        // console.log(columna)
         matrizResultado[fila][columna] = matrizA[fila][columna] + matrizB[fila][columna]
     }
 }
 
-for (var fila = 0; fila < 3; fila++) {
+for (var fila = 0; fila <= 3; fila++) {
     for (var columna = 0; columna < 3; columna++) {
         matrizResultado2[fila][columna] = matrizA[fila][columna] - matrizB[fila][columna]
     }
@@ -46,3 +49,9 @@ for (var fila = 0; fila < 3; fila++) {
 
 console.log('matrizResultado (suma) => ', matrizResultado);
 console.log('matrizResultado (resta) => ', matrizResultado2);
+console.log(matrizA.length)
+
+// < Menor
+// > Mayor
+// <= Menor igual
+// >= Mayor igual
