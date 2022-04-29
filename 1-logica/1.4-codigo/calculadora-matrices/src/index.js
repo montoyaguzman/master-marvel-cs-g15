@@ -1,47 +1,48 @@
-// Variables simples
-var name = "jose";
-var app = "montoya";
-var bookName = "harry potter y la piedra filosofal";
-// Variables complejas
-var student = {
-    name: 'juanito lopez',
-    age: 29,
-    isMarried: true,
-    matters: [10, 8, 4, 5, 2, 1, 67, 42, 99]
-}
-var computer = {
-    brand: 'dell',
-    price: 2000,
-    color: 'black'
-};
-let numbers = [10, 20, 30, 40];
-var subjects = ['Math', 'English', 'History', 'English', 'Computer science', 'English', 'History'];
-let gradesArr = [true, 10, 9, 0, { value: 10, nota: "excelencia academica"} ];
-let matriz = [
-    [0, 10, 9],
-    [9, 9 , 8, 100, 7, 10, 10, 10, 9, 10, 10, 9],
-    [9, 9 , 8, 100, 7, 10, 10, 1120, 9],
-    [9, 9 , 8, 100, 777, 10],
+const matrizA = [
+    [2, 0, 1],
+    [3, 2, 0],
+    [5, 4, 1]
 ];
 
-console.log(name);
-console.log(student);
-console.log(student.name);
-console.log(numbers[2]);
-console.log(subjects[4]);
-console.log(gradesArr[3].nota);
-console.log(student.matters[4]);
-console.log(matriz[1][3]);
+const matrizB = [
+    [4, 0, 3],
+    [1, 2, 7],
+    [4, 5, 0]
+];
 
-// imprimir la edad del student
-console.log(student.age);
-// imprimir el valor 67 de las matters de student
-console.log(student.matters[6]);
-// // imprimir el valor 1120 de la matriz
-console.log(matriz[2][7]);
-// // imprimir el valor 777 de la matriz
-console.log(matriz[3][4]);
-// // imprimir el valor 0 de la matriz
-console.log(matriz[0][0]);
-// // imprimir el valor true de gradesArr
-console.log(gradesArr[0]);
+const matrizResultado = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+];
+
+const matrizResultado2 = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+];
+
+console.log('matrizA => ', matrizA);
+console.log('matrizB => ', matrizB);
+
+// console.log(matrizB[0][0]);
+// console.log(matrizB[0][1]);
+// console.log(matrizB[0][2]);
+// console.log(matrizB[1][0]);
+// console.log(matrizB[1][1]);
+// console.log(matriz[0][3]); // undefined
+
+for (var fila = 0; fila < 3; fila++) {
+    for (var columna = 0; columna < 3; columna++) {
+        matrizResultado[fila][columna] = matrizA[fila][columna] + matrizB[fila][columna]
+    }
+}
+
+for (var fila = 0; fila < 3; fila++) {
+    for (var columna = 0; columna < 3; columna++) {
+        matrizResultado2[fila][columna] = matrizA[fila][columna] - matrizB[fila][columna]
+    }
+}
+
+console.log('matrizResultado (suma) => ', matrizResultado);
+console.log('matrizResultado (resta) => ', matrizResultado2);
