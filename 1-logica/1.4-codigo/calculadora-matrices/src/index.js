@@ -34,14 +34,14 @@ console.log(student.matters[4]);
 console.log(matriz[1][3]);
 
 // imprimir la edad del student
-console.log();
+console.log(student.age);
 // imprimir el valor 67 de las matters de student
-console.log();
-// imprimir el valor 1120 de la matriz
-console.log();
-// imprimir el valor 777 de la matriz
-console.log();
-// imprimir el valor 0 de la matriz
-console.log();
-// imprimir el valor true de gradesArr
-console.log();
+console.log(student.matters[6]);
+// // imprimir el valor 1120 de la matriz
+console.log(matriz[2][7]);
+// // imprimir el valor 777 de la matriz
+console.log(matriz[3][4]);
+// // imprimir el valor 0 de la matriz
+console.log(matriz[0][0]);
+// // imprimir el valor true de gradesArr
+console.log(gradesArr[0]);
