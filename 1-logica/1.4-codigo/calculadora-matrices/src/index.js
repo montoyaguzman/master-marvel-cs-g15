@@ -34,14 +34,14 @@ console.log('matrizB => ', matrizB);
 
 for (var fila = 0; fila < matrizResultado.length; fila++) {
     for (var columna = 0; columna < matrizResultado.length; columna++) {
-        debugger
+        // debugger
         // console.log(fila)
         // console.log(columna)
         matrizResultado[fila][columna] = matrizA[fila][columna] + matrizB[fila][columna]
     }
 }
 
-for (var fila = 0; fila <= 3; fila++) {
+for (var fila = 0; fila < 3; fila++) {
     for (var columna = 0; columna < 3; columna++) {
         matrizResultado2[fila][columna] = matrizA[fila][columna] - matrizB[fila][columna]
     }
