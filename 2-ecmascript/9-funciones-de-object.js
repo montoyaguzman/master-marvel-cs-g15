@@ -1,4 +1,9 @@
-const superhero = { id: 1, name: 'peter', app: 'parker', alias: 'spiderman' };
+const superhero = { 
+    id: 1, 
+    name: 'peter', 
+    app: 'parker', 
+    alias: 'spiderman' 
+};
 
 /** Object => Objeto o entidad (excepcion: si el objeto esta con mayusculas 
 es porque es un metodo estatico)
