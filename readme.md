@@ -74,4 +74,4 @@ Es un [lenguaje de marcado ligero](https://es.wikipedia.org/wiki/Lenguajes_de_ma
 
 **Introducción a la lógica de programación** => Lenguaje natural, diagramas de flujo, pseudocodigo, pruebas de escritorio, etc.
 
-**Matemáticas discretas y algebra boleana** => Condiciones
+**Matemáticas discretas y algebra boleana** => Condiciones y tablas de verdad
