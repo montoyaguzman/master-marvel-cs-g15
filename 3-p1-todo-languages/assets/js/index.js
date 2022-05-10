@@ -20,3 +20,13 @@ formElement.addEventListener('submit', (event) => {
     console.log(languages);
 
 });
+
+const renderElementList = () => {
+    const ulElement = document.querySelector('#list-languages');
+    const liElement = document.createElement('li');
+    const iElement = document.createElement('i');
+    const divElement = document.createElement('div');
+    const buttonElement = document.createElement('button');
+    liElement.classList.add('list-group-item', 'd-flex', 'justify-content-between');
+    liElement.appendChild(ulElement);
+}
