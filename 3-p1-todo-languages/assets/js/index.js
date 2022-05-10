@@ -3,6 +3,7 @@ const formElement = document.querySelector('#language-form'); // funciona con se
 
 formElement.addEventListener('submit', (event) => {
     event.preventDefault();
+    console.log(event);
     console.log(event.target);
     const inputData = event.target.language;
     console.log(inputData);
