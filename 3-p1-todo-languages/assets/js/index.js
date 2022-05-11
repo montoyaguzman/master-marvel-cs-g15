@@ -22,11 +22,27 @@ formElement.addEventListener('submit', (event) => {
 });
 
 const renderElementList = () => {
+    // seleccion del elemento padre
     const ulElement = document.querySelector('#list-languages');
+    // creacion de elementos hijos
     const liElement = document.createElement('li');
     const iElement = document.createElement('i');
     const divElement = document.createElement('div');
     const buttonElement = document.createElement('button');
+    // agregado de clases a los nuevos elementos
     liElement.classList.add('list-group-item', 'd-flex', 'justify-content-between');
-    liElement.appendChild(ulElement);
+    iElement.classList.add('bi', 'bi-pause-circle-fill', 'text-primary');
+    buttonElement.classList.add('bi', 'bi-trash3-fill', 'text-danger');
+    buttonElement.setAttribute('type', 'submit');
+    buttonElement.setAttribute('index', 0);
+    // agregar nombre de lenguaje
+    liElement.innerHTML = 'JavaScript';
+
+    ulElement.appendChild(liElement);
+    liElement.appendChild(divElement);
+    divElement.appendChild(iElement);
+    divElement.appendChild(buttonElement);
+
 }
+
+renderElementList();
