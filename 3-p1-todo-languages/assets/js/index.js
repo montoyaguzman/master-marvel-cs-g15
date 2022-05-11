@@ -86,8 +86,11 @@ const handleDeleteClick = (event) => {
     const positionStr = event.target.getAttribute('index');
     const position = parseInt(positionStr);
     languages.splice(position, 1);
+    
     cleanView();
     renderLanguagesList(languages);
+    renderTotal(languages);
+
 };
 
 const renderTotal = (languajesArray) => {
