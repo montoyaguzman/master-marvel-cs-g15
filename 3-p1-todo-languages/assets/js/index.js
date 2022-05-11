@@ -24,6 +24,7 @@ formElement.addEventListener('submit', (event) => {
     languages.push(language);
 
     renderLanguagesList(languages);
+    renderTotal(languages);
     resetForm();
 
 });
@@ -88,3 +89,32 @@ const handleDeleteClick = (event) => {
     cleanView();
     renderLanguagesList(languages);
 };
+
+const renderTotal = (languajesArray) => {
+    const allTotal = document.querySelector('#language-all');
+    const completedTotal = document.querySelector('#language-complete');
+    const pendingTotal = document.querySelector('#language-pending');
+    allTotal.innerHTML = languajesArray.length;
+    // calcular completados
+    const complets = getCompletes(languajesArray);
+    completedTotal.innerHTML = complets;
+    // calcular pendientes
+    const pendings = getPendings(languajesArray);
+    pendingTotal.innerHTML = pendings;
+};
+
+const getCompletes = (languajesArray) => {
+    const completeElementsArr = languajesArray.filter(element => element.status === 'finished');
+    return completeElementsArr.length;
+}
+
+function getPendings(languajesArray) {
+    let num = 0;
+    for (let i=0; i < languajesArray.length; i++) {
+        const iterador = languajesArray[i];
+        if (iterador.status === 'start' || iterador.status === 'standBy') {
+            num++;
+        }
+    }
+    return num;
+}
