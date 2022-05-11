@@ -7,7 +7,6 @@ const ulElement = document.querySelector('#list-languages');
 formElement.addEventListener('submit', (event) => {
     
     // clean
-
     ulElement.innerHTML = '';
     
     event.preventDefault();
@@ -26,6 +25,7 @@ formElement.addEventListener('submit', (event) => {
     languages.push(language);
 
     renderLanguagesList(languages);
+    resetForm();
 
 });
 
@@ -38,7 +38,7 @@ const renderLanguagesList = (languages) => {
         newDiv.appendChild(newContent); //añade texto al div creado.
         ulElement.appendChild(newDiv);
     }
-}
+};
 
 const renderElementList = (element, index) => {
     // creacion de elementos hijos
@@ -50,8 +50,9 @@ const renderElementList = (element, index) => {
     liElement.classList.add('list-group-item', 'd-flex', 'justify-content-between');
     setClassForIcon(iElement, element.status);
     buttonElement.classList.add('bi', 'bi-trash3-fill', 'text-danger');
-    buttonElement.setAttribute('type', 'submit');
+    buttonElement.setAttribute('type', 'button');
     buttonElement.setAttribute('index', index);
+    buttonElement.addEventListener('click', handleDeleteClick);
     // agregar nombre de lenguaje
     liElement.innerHTML = element.text;
     // hacer aparecer los elementos 
@@ -60,7 +61,7 @@ const renderElementList = (element, index) => {
     divElement.appendChild(iElement);
     divElement.appendChild(buttonElement);
 
-}
+};
 
 const setClassForIcon = (iElement, status) => {
     iElement.classList.add('bi');
@@ -71,4 +72,14 @@ const setClassForIcon = (iElement, status) => {
     } else if (status === 'finished') {
         iElement.classList.add('text-success' , 'bi-check-lg');
     }
-}
+};
+
+const resetForm = () => {
+
+};
+
+const handleDeleteClick = (event) => {
+    const positionStr = event.target.getAttribute('index');
+    const position = parseInt(positionStr);
+    languages.splice(position, 1);
+};
