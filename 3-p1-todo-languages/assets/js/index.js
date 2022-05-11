@@ -3,6 +3,10 @@ const formElement = document.querySelector('#language-form'); // funciona con se
 let languages = [];
 // seleccion del elemento padre
 const ulElement = document.querySelector('#list-languages');
+// constantes del aplicacion
+const STAND_BY_STATUS = 'standBy';
+const START_STATUS = 'start';
+const FINISHED_STATUS = 'finished';
 
 formElement.addEventListener('submit', (event) => {
     
@@ -65,11 +69,11 @@ const renderElementList = (element, index) => {
 
 const setClassForIcon = (iElement, status) => {
     iElement.classList.add('bi');
-    if (status === 'standBy') {
+    if (status === STAND_BY_STATUS) {
         iElement.classList.add('text-warning' , 'bi-pause-circle-fill');
-    } else if (status === 'start') {
+    } else if (status === START_STATUS) {
         iElement.classList.add('text-primary' , 'bi-play-fill');
-    } else if (status === 'finished') {
+    } else if (status === FINISHED_STATUS) {
         iElement.classList.add('text-success' , 'bi-check-lg');
     }
 };
@@ -108,7 +112,7 @@ const renderTotal = (languajesArray) => {
 };
 
 const getCompletes = (languajesArray) => {
-    const completeElementsArr = languajesArray.filter(element => element.status === 'finished');
+    const completeElementsArr = languajesArray.filter(element => element.status === FINISHED_STATUS);
     return completeElementsArr.length;
 }
 
@@ -116,7 +120,7 @@ function getPendings(languajesArray) {
     let num = 0;
     for (let i=0; i < languajesArray.length; i++) {
         const iterador = languajesArray[i];
-        if (iterador.status === 'start' || iterador.status === 'standBy') {
+        if (iterador.status === START_STATUS || iterador.status === STAND_BY_STATUS) {
             num++;
         }
     }
