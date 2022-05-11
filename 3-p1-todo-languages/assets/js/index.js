@@ -6,8 +6,7 @@ const ulElement = document.querySelector('#list-languages');
 
 formElement.addEventListener('submit', (event) => {
     
-    // clean
-    ulElement.innerHTML = '';
+    cleanView();
     
     event.preventDefault();
     // destructutring
@@ -78,8 +77,14 @@ const resetForm = () => {
 
 };
 
+const cleanView = () => {
+    ulElement.innerHTML = '';
+};
+
 const handleDeleteClick = (event) => {
     const positionStr = event.target.getAttribute('index');
     const position = parseInt(positionStr);
     languages.splice(position, 1);
+    cleanView();
+    renderLanguagesList(languages);
 };
