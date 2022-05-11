@@ -48,7 +48,7 @@ const renderElementList = (element, index) => {
     const buttonElement = document.createElement('button');
     // agregado de clases a los nuevos elementos
     liElement.classList.add('list-group-item', 'd-flex', 'justify-content-between');
-    validateIconType(element.status);
+    setClassForIcon(iElement, element.status);
     buttonElement.classList.add('bi', 'bi-trash3-fill', 'text-danger');
     buttonElement.setAttribute('type', 'submit');
     buttonElement.setAttribute('index', index);
@@ -62,16 +62,13 @@ const renderElementList = (element, index) => {
 
 }
 
-const validateIconType = (status) => {
+const setClassForIcon = (iElement, status) => {
+    iElement.classList.add('bi');
     if (status === 'standBy') {
-
+        iElement.classList.add('text-warning' , 'bi-pause-circle-fill');
     } else if (status === 'start') {
-
+        iElement.classList.add('text-primary' , 'bi-play-fill');
     } else if (status === 'finished') {
-
+        iElement.classList.add('text-success' , 'bi-check-lg');
     }
-    // iElement.classList.add('bi', '', '');
-    // text-success - bi-pause-circle-fill
-    // text-warning - bi-pause-circle-fill
-    // text-primary - bi-pause-circle-fill
 }
