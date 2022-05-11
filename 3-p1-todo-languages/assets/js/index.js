@@ -1,8 +1,15 @@
 // const formElement = document.getElementById('language-form');
 const formElement = document.querySelector('#language-form'); // funciona con selectores tipo css
 let languages = [];
+// seleccion del elemento padre
+const ulElement = document.querySelector('#list-languages');
 
 formElement.addEventListener('submit', (event) => {
+    
+    // clean
+
+    ulElement.innerHTML = '';
+    
     event.preventDefault();
     // destructutring
     const { languageElement, statusRadioElement } = event.target;
@@ -17,13 +24,23 @@ formElement.addEventListener('submit', (event) => {
         status: statusValue 
     };
     languages.push(language);
-    console.log(languages);
+
+    renderLanguagesList(languages);
 
 });
 
-const renderElementList = () => {
-    // seleccion del elemento padre
-    const ulElement = document.querySelector('#list-languages');
+const renderLanguagesList = (languages) => {
+    if (languages.length > 0) {
+        languages.forEach(renderElementList);
+    } else {
+        const newDiv = document.createElement('div');
+        const newContent = document.createTextNode('No hay lenguajes en la lista...');
+        newDiv.appendChild(newContent); //añade texto al div creado.
+        ulElement.appendChild(newDiv);
+    }
+}
+
+const renderElementList = (element, index) => {
     // creacion de elementos hijos
     const liElement = document.createElement('li');
     const iElement = document.createElement('i');
@@ -31,13 +48,13 @@ const renderElementList = () => {
     const buttonElement = document.createElement('button');
     // agregado de clases a los nuevos elementos
     liElement.classList.add('list-group-item', 'd-flex', 'justify-content-between');
-    iElement.classList.add('bi', 'bi-pause-circle-fill', 'text-primary');
+    validateIconType(element.status);
     buttonElement.classList.add('bi', 'bi-trash3-fill', 'text-danger');
     buttonElement.setAttribute('type', 'submit');
-    buttonElement.setAttribute('index', 0);
+    buttonElement.setAttribute('index', index);
     // agregar nombre de lenguaje
-    liElement.innerHTML = 'JavaScript';
-
+    liElement.innerHTML = element.text;
+    // hacer aparecer los elementos 
     ulElement.appendChild(liElement);
     liElement.appendChild(divElement);
     divElement.appendChild(iElement);
@@ -45,4 +62,16 @@ const renderElementList = () => {
 
 }
 
-renderElementList();
+const validateIconType = (status) => {
+    if (status === 'standBy') {
+
+    } else if (status === 'start') {
+
+    } else if (status === 'finished') {
+
+    }
+    // iElement.classList.add('bi', '', '');
+    // text-success - bi-pause-circle-fill
+    // text-warning - bi-pause-circle-fill
+    // text-primary - bi-pause-circle-fill
+}
