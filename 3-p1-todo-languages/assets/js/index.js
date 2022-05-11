@@ -25,7 +25,7 @@ formElement.addEventListener('submit', (event) => {
 
     renderLanguagesList(languages);
     renderTotal(languages);
-    resetForm();
+    resetForm(languageElement, statusRadioElement);
 
 });
 
@@ -74,8 +74,9 @@ const setClassForIcon = (iElement, status) => {
     }
 };
 
-const resetForm = () => {
-
+const resetForm = (languageElement, statusRadioElement) => {
+    languageElement.value = '';
+    Array.from(statusRadioElement).forEach(element => element.checked = false);
 };
 
 const cleanView = () => {
