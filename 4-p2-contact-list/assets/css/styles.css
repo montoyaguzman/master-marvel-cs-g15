@@ -4,8 +4,23 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #303f9f;
+    padding: 20vh 25%;
+    height: 100vh;
+}
+
 img {
     width: 50px;
     border-radius: 40px;
     border: solid black;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 40px;
+}
+
+.list {
+    background-color: #e0e0e0;
 }
