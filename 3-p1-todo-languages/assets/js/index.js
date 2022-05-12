@@ -36,12 +36,7 @@ formElement.addEventListener('submit', (event) => {
 const renderLanguagesList = (languages) => {
     if (languages.length > 0) {
         languages.forEach(renderElementList);
-    } else {
-        const newDiv = document.createElement('div');
-        const newContent = document.createTextNode('No hay lenguajes en la lista...');
-        newDiv.appendChild(newContent); //añade texto al div creado.
-        ulElement.appendChild(newDiv);
-    }
+    } 
 };
 
 const renderElementList = (element, index) => {
@@ -114,7 +109,7 @@ const renderTotal = (languajesArray) => {
 const getCompletes = (languajesArray) => {
     const completeElementsArr = languajesArray.filter(element => element.status === FINISHED_STATUS);
     return completeElementsArr.length;
-}
+};
 
 function getPendings(languajesArray) {
     let num = 0;
@@ -126,3 +121,12 @@ function getPendings(languajesArray) {
     }
     return num;
 }
+
+const main = () => {
+    const newDiv = document.createElement('div');
+    const newContent = document.createTextNode('No hay lenguajes en la lista...');
+    newDiv.appendChild(newContent); //añade texto al div creado.
+    ulElement.appendChild(newDiv);
+};
+
+main();
