@@ -10,14 +10,22 @@ const main = () => {
         .then(response => response.json())
         .then(data => normalizeData(data))
         .then(contacts => contacts.forEach(renderCardContact))
+        // .then(contacts => {
+        //     let i = 0;
+        //     while(i < contacts.length) {
+        //         renderCardContact(contacts[i]);
+        //         i++;
+        //     }
+        // })
 };
 
 // 4. Normalizar los datos => Selector
 const normalizeData = (data) => {
     data.forEach(element => {
+        const { name, image } = element;
         const contact = {
-            text: element.name,
-            photo: element.image
+            text: name,
+            photo: image
         };
         contacts.push(contact);
     });
