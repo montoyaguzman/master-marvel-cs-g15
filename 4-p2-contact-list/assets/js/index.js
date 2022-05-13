@@ -1,42 +1,31 @@
+// 2. Obtener el element raiz HTML
 const ulElement = document.querySelector('#contacts-ul');
 const searchElement = document.querySelector('#studentInput');
 let contacts = [];
 
-searchElement.addEventListener('keyup', (event) => {
-    const inputText = event?.target?.value.toLocaleLowerCase() || '';
-    cleanView();
-    // const contactsFiltered = searchingWithFor(inputText);
-    const contactsFiltered = searchingWithFilter(inputText);
-    contactsFiltered.forEach(renderCardContact);
-    
-
-});
-
-const searchingWithFor = (searchingText) => {
-    let contactsFiltered = [];
-    for (let i=0; i < contacts.length; i++) {
-        const contact = contacts[i];
-        const name = contact.text;
-        if ((name.toLocaleLowerCase()).includes(searchingText)) {
-            contactsFiltered.push(contact);
-        }
-    }
-    return contactsFiltered;
+// 3. Poder obtener la informacion de una fuente de datos (API)
+const main = () => {
+    // fetch('http://hp-api.herokuapp.com/api/characters/students')
+    fetch('./api/characters.json')
+        .then(response => response.json())
+        .then(data => normalizeData(data))
+        .then(contacts => contacts.forEach(renderCardContact))
 };
 
-const searchingWithFilter = (searchingText) => {
-    const contactsFiltered = contacts.filter(contact => {
-        const name = contact.text;
-        return (name.toLocaleLowerCase()).includes(searchingText)
+// 4. Normalizar los datos => Selector
+const normalizeData = (data) => {
+    data.forEach(element => {
+        const contact = {
+            text: element.name,
+            photo: element.image
+        };
+        contacts.push(contact);
     });
-    return contactsFiltered;
+    return contacts;
 };
 
+// 5. Crear una funcion que rendere (pinte) la informacion de cada tarjeta de contacto
 const renderCardContact = (element) => {
-    // const newDiv = document.createElement('div');
-    // liElement.classList.add('list-group-item', 'd-flex', 'justify-content-between');
-    // buttonElement.setAttribute('index', index);
-    // newDiv.appendChild(newContent);
 
     const li = document.createElement('li');
     const cardDiv = document.createElement('div');
@@ -65,30 +54,39 @@ const renderCardContact = (element) => {
     cardDiv.appendChild(texDiv);
     photoDiv.appendChild(img);
 
-}
+};
 
 const cleanView = () => {
     ulElement.innerHTML = '';
-} 
-
-const normalizeData = (data) => {
-    data.forEach(element => {
-        const contact = {
-            text: element.name,
-            photo: element.image
-        };
-        contacts.push(contact);
-    });
-    return contacts;
-}
-
-
-const main = () => {
-    // fetch('http://hp-api.herokuapp.com/api/characters/students')
-    fetch('./api/characters.json')
-        .then(response => response.json())
-        .then(data => normalizeData(data))
-        .then(contacts => contacts.forEach(renderCardContact))
 };
 
+searchElement.addEventListener('keyup', (event) => {
+    const inputText = event?.target?.value.toLocaleLowerCase() || '';
+    cleanView();
+    // const contactsFiltered = searchingWithFor(inputText);
+    const contactsFiltered = searchingWithFilter(inputText);
+    contactsFiltered.forEach(renderCardContact);
+});
+
+const searchingWithFor = (searchingText) => {
+    let contactsFiltered = [];
+    for (let i=0; i < contacts.length; i++) {
+        const contact = contacts[i];
+        const name = contact.text;
+        if ((name.toLocaleLowerCase()).includes(searchingText)) {
+            contactsFiltered.push(contact);
+        }
+    }
+    return contactsFiltered;
+};
+
+const searchingWithFilter = (searchingText) => {
+    const contactsFiltered = contacts.filter(contact => {
+        const name = contact.text;
+        return (name.toLocaleLowerCase()).includes(searchingText)
+    });
+    return contactsFiltered;
+};
+
+// Lanza la aplicacion
 main();
