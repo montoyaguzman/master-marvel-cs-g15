@@ -1,4 +1,29 @@
 const ulElement = document.querySelector('#contacts-ul');
+const searchElement = document.querySelector('#studentInput');
+let contacts = [];
+
+searchElement.addEventListener('keyup', (event) => {
+    const inputText = event?.target?.value.toLocaleLowerCase() || '';
+    searchingWithFor(inputText);
+    // searchingWithFilter(inputText);
+
+});
+
+const searchingWithFor = (searchingText) => {
+    let contactsFiltered = [];
+    for (let i=0; i < contacts.length; i++) {
+        const contact = contacts[i];
+        const name = contact.text;
+        if ((name.toLocaleLowerCase()).includes(searchingText)) {
+            contactsFiltered.push(contact);
+        }
+    }
+    console.log(contactsFiltered)
+};
+
+const searchingWithFilter = (searchingText) => {
+
+};
 
 const renderCardContact = (element) => {
     // const newDiv = document.createElement('div');
@@ -36,7 +61,6 @@ const renderCardContact = (element) => {
 }
 
 const normalizeData = (data) => {
-    let contacts = [];
     data.forEach(element => {
         const contact = {
             text: element.name,
