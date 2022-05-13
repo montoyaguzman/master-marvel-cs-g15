@@ -16,6 +16,11 @@ img {
     border: solid black;
 }
 
+.list-container {
+    height: 41vh;
+    overflow-y: auto;
+}
+
 .contact-card {
     background-color: white;
     padding: 40px;
