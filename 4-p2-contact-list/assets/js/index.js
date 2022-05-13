@@ -4,7 +4,9 @@ let contacts = [];
 
 searchElement.addEventListener('keyup', (event) => {
     const inputText = event?.target?.value.toLocaleLowerCase() || '';
-    searchingWithFor(inputText);
+    cleanView();
+    const contactsFiltered = searchingWithFor(inputText);
+    contactsFiltered.forEach(renderCardContact);
     // searchingWithFilter(inputText);
 
 });
@@ -18,7 +20,7 @@ const searchingWithFor = (searchingText) => {
             contactsFiltered.push(contact);
         }
     }
-    console.log(contactsFiltered)
+    return contactsFiltered;
 };
 
 const searchingWithFilter = (searchingText) => {
@@ -59,6 +61,10 @@ const renderCardContact = (element) => {
     photoDiv.appendChild(img);
 
 }
+
+const cleanView = () => {
+    ulElement.innerHTML = '';
+} 
 
 const normalizeData = (data) => {
     data.forEach(element => {
