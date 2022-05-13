@@ -5,9 +5,10 @@ let contacts = [];
 searchElement.addEventListener('keyup', (event) => {
     const inputText = event?.target?.value.toLocaleLowerCase() || '';
     cleanView();
-    const contactsFiltered = searchingWithFor(inputText);
+    // const contactsFiltered = searchingWithFor(inputText);
+    const contactsFiltered = searchingWithFilter(inputText);
     contactsFiltered.forEach(renderCardContact);
-    // searchingWithFilter(inputText);
+    
 
 });
 
@@ -24,7 +25,11 @@ const searchingWithFor = (searchingText) => {
 };
 
 const searchingWithFilter = (searchingText) => {
-
+    const contactsFiltered = contacts.filter(contact => {
+        const name = contact.text;
+        return (name.toLocaleLowerCase()).includes(searchingText)
+    });
+    return contactsFiltered;
 };
 
 const renderCardContact = (element) => {
