@@ -1,0 +1,48 @@
+TIPOS DE VARIABLES
+
+Simples
+* Boolean
+* String
+* Number
+* Double
+
+Complejas
+* Array
+* Objetos
+
+==> PADRE DE TODOS LOS OBJETOS JS => PROTOTYPE
+
+
+EJEMPLO DE JERARQUIA DE CLASE AUTO CON UML
+
+-----------------------
+Auto
+-----------------------
+color
+modelo
+noPuertas
+fechaFabricacion
+millas
+dimensiones
+marca
+-----------------------
+encender()
+frenar()
+acelerar()
+
+-----------------------
+Tsuru
+-----------------------
+lectorCD
+-----------------------
+reproducirCd()
+
+-----------------------
+Mazda
+-----------------------
+aireAcondicionado
+bluetooh
+gps
+-----------------------
+encenderAireAcondicionado()
+turbo()
