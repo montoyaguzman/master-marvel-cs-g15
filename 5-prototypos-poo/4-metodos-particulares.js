@@ -28,6 +28,7 @@ const autoMethods = {
   mazda.darAire = function() {
     console.log('aire');
   }
+  
   tsuru.reproduceCd = function() {
     console.log('reproduce cd');
   }
