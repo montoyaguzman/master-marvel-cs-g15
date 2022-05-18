@@ -2,7 +2,9 @@
 
 ### Introducción a la lógica
 
-**Lógica:** Razonamiento en el que las ideas se manifiestan o  desarrollan de forma coherente y sin que haya contradicciones entre ellas.
+#### **Definición de Lógica**
+
+Razonamiento en el que las ideas se manifiestan o  desarrollan de forma coherente y sin que haya contradicciones entre ellas.
 
 #### **Fases del análisis de un problema**
 
@@ -28,6 +30,15 @@ Un algoritmo es un conjunto de acciones que especifican la secuencia de operacio
 * Proceso.
 * Salida.
 
+#### Características de un algoritmo
+
+* Exacto.
+* Definido.
+* Completo.
+* Finito.
+* Instrucciones entendibles.
+* General
+
 #### Representaciones de un algoritmo
 
 * Lenguaje natural.
@@ -35,6 +46,211 @@ Un algoritmo es un conjunto de acciones que especifican la secuencia de operacio
 * Pseudocódigo.
 * Código.
 * Pruebas de escritorio.
+
+#### Diagrama de flujo
+
+Rrepresentación gráfica de un algorito utlizada para diseñar algoritmos, documentar funcionalidades (flujos) y comunicar procesos complejos en una representación clara y sencilla.
+
+##### Símbologia
+
+* Inicio.
+* Entrada / Lectura.
+* Proceso.
+* Descisión.
+* Documento / Impresión.
+* FIn.
+* Conectores.
+* Flechas.
+
+#### Pseudocódigo
+
+Forma de expresar los pasos de un programa combinando paralabras entendibles para los humanos pero que son "comunes" en programación.
+
+##### Convenciones de pseudocódigo
+
+* "INICIO".
+* “Leer”.
+* “Si… entonces…”
+* “Si no … entonces…”
+* “Mientras…”
+* “Si y sólo si --- entonces”
+* “Imprimir”
+* “FIN”
+
+#### Plataformas para diseñar diagramas
+
+* [Lucidchart](https://lucid.app/)
+* [Draw.io](https://app.diagrams.net/)
+
+#### Plataformas para prácticas lógica
+
+* [Hacker rank.](https://www.hackerrank.com/)
+* [Codewars.](https://www.codewars.com/)
+* [CodePen.](https://codepen.io/)
+
+### ECMAScript
+
+Es el estándar que la empresa del mismo nombre definió para JavaScript en el año 2015 (ES6) y encarga de regir como debe ser interpretado y cómo debe funcionar el lenguaje JavaScript.
+
+#### Lista de funcionalidades
+
+* Let y const.
+* Arrow functionts (short and long form).
+* For in/ for of.
+* Map.
+* Classes
+* Promises
+* Default parameters.
+* Spread / Rest operator.
+* Object entries, keys y values.
+* JS Modules.
+* Literal templates.
+* Map y Set (Estructura de datos).
+* Exponentiation.
+* Async
+* Finally (Promises).
+* RegExp.
+* Métodos de arreglos (push, slice, splice, indexOf, includes, find, findIndex, map, filter, reduce, reverse, forEach).
+
+#### Bonus JS
+
+* Tablas de verdad y tipos de operadores.
+* Valor por defecto de una variable.
+* Cortocircuito ?.
+* Paso por referencia y valor.
+* Diferencia entre map y forEach.
+* Tipos de funciones en JS.
+
+### POO
+
+Es un paradigma de programación centrado en:
+
+* Plantillas base (clases). => **Auto**
+* Objetos, son elementos concretos de una clase.=> **mazda, tsuru**
+* Atributos/Propiedades: Son las caracteristicas de los objetos. => **color, dimensiones, modelo**
+* Métodos/Funciones: Son las acciones puede realizar un objeto. => arranca(), frena().
+
+#### Formas de crear objetos en JS
+
+##### Literal objects.
+
+```
+const pikachu = {
+  name: 'pikachu',
+  height: 90
+}
+```
+
+##### new Object.
+
+```
+const pikachu = new Object();
+pikachu.name: 'pikachu',
+pikachu.height: 90
+```
+
+##### Funcion constructora
+
+```
+function createPokemon(name, height) {  
+  const auto = {  
+    name: name,  
+    height: height,  
+  }
+  return auto;  
+}  
+const pikachu = createPokemon('pikachu', 90);
+```
+
+##### Funcion constructora con new y this.
+
+```
+function createPokemon(name, height) {
+    this.name: name,
+    this.height: height,
+}
+const pikachu = new createPokemon('pikachu', 90);
+```
+
+##### Prototype (herencia).
+
+```
+function Pokemon(name, height) {
+  const auto = {
+    name: name,
+    height: height,
+  }
+  return auto;
+}
+const pikachu = createPokemon('pikachu', 90);function Pokemon(name, height) {
+    this.name = name;
+    this.height = height;
+}
+
+const pikachu = new Pokemon('pikachu', 90);
+console.log(pikachu.height);
+
+Pokemon.prototype.camina = function() {
+      console.log('C-A-M-I-N-A-R')
+};
+pikachu.camina();
+```
+
+##### Sugar Syntaxis.
+
+```
+class Poke {
+    constructor(name, type, power) {
+        this.name = name;
+        this.type = type;
+        this.power = power;
+    }
+  
+    attack(bonus) { 
+        console.log(`${this.power}`, bonus);
+    }
+
+    alive(points) { // Funcion que si retorna un valor
+        if (points > 1) {
+            return true;
+        }
+        return false;
+    }
+}
+
+class FlightPoke extends Poke {
+    constructor(name, type, power, alas) {
+        super(name, type, power);
+        this.alas = alas;
+    }
+    flight() {
+        console.log('yo vuelo');
+    }
+}
+
+class WaterPoke extends Poke {
+    constructor(name, type, power, aletas) {
+        super(name, type, power);
+        this.aletas = aletas;
+    }
+    swim() {
+        console.log('yo nado');
+    }
+}
+
+const squirtle = new WaterPoke('Squirtle', 'Water', 'pulse water', 'tengo 4 aletas');
+const pidgey = new FlightPoke('Pidgey', 'Flight', 'aerial ace', 'tengo 2 alas');
+
+console.log(squirtle)
+squirtle.attack(99);
+squirtle.swim();
+pidgey.attack(10);
+pidgey.flight();
+// squirtle.flight();
+// La linea anterior produce un error porque squirtle no tiene ese metodo
+```
+
+**Nota:** Recuerde la exitencia de Object.create y { ...props } para generar nuevos objetos a partir de otros sin mantener la referencia.
 
 ### Información adicional
 
@@ -74,4 +290,4 @@ Es un [lenguaje de marcado ligero](https://es.wikipedia.org/wiki/Lenguajes_de_ma
 
 **Introducción a la lógica de programación** => Lenguaje natural, diagramas de flujo, pseudocodigo, pruebas de escritorio, etc.
 
-**Matemáticas discretas y algebra boleana** => Condiciones y tablas de verdad
+**Matemáticas discretas y algebra boleana** => Condiciones y tablas de verdad.
