@@ -112,6 +112,23 @@ Es el estándar que la empresa del mismo nombre definió para JavaScript en el a
 * RegExp.
 * Métodos de arreglos (push, slice, splice, indexOf, includes, find, findIndex, map, filter, reduce, reverse, forEach).
 
+#### Sintáxis de las funciones flecha
+
+```
+// Funcion flecha ordinaria (con muchos parametros y cuerpo)
+(param1, param2, paramN) => { //cuerpo de la funcion }
+
+// Funcion flecha con 1 solo param (no requiere parentesis en los parametros)
+param1 => { //cuerpo de la funcion }
+
+// Funcion flecha con una sola linea como retorno (no tiene cuerpo {})
+(param1, param2, paramN) => // result
+
+// Funcion flecha con 1 solo param y una sola linea como retorno (no tiene ni parantesis ni cuerpo)
+param1 => //result
+```
+
+
 #### Bonus JS
 
 * Tablas de verdad y tipos de operadores.
@@ -138,6 +155,9 @@ Es un paradigma de programación centrado en:
 const pikachu = {
   name: 'pikachu',
   height: 90
+  camina: function() {
+    console.log('C-A-M-I-N-A-R');
+  }
 }
 ```
 
@@ -210,7 +230,7 @@ class Poke {
         console.log(`${this.power}`, bonus);
     }
 
-    alive(points) { // Funcion que si retorna un valor
+    alive(points) { 
         if (points > 1) {
             return true;
         }
@@ -291,3 +311,31 @@ Es un [lenguaje de marcado ligero](https://es.wikipedia.org/wiki/Lenguajes_de_ma
 **Introducción a la lógica de programación** => Lenguaje natural, diagramas de flujo, pseudocodigo, pruebas de escritorio, etc.
 
 **Matemáticas discretas y algebra boleana** => Condiciones y tablas de verdad.
+
+
+
+#### **Redes sociales para estudiar**
+
+##### Plataformas de aprendizaje
+
+* [SoloLearn.](https://www.sololearn.com/)
+* [TutorialesYa.](https://www.tutorialesprogramacionya.com/)
+* [W3Schools.](https://www.w3schools.com/)
+* [Mozilla Developer Network.](https://developer.mozilla.org/es/)
+
+##### Youtube
+
+* [Carlos Azaustre.](https://www.youtube.com/c/CarlosAzaustre)
+* [Fazt.](https://www.youtube.com/c/FaztTech)
+* [Absolute.](https://www.youtube.com/c/AbsoluteSite)
+* [MidudeDev](https://www.youtube.com/c/midudev).
+* [CodelyTV.](https://www.youtube.com/c/CodelyTv)
+
+##### Redes sociales
+
+* [Carlos Azaustre.](https://www.instagram.com/carlosazaustre/?hl=es)
+* [EdTeam.](https://www.instagram.com/edteamlat/?hl=es)
+* [Richwebdeveloper.](https://www.instagram.com/richwebdeveloper/?hl=es)
+* [Vertechie](https://www.instagram.com/veritechie/?hl=es).
+* [AnnCode](https://www.instagram.com/anncode/?hl=es).
+* [Manz.](https://twitter.com/Manz)
